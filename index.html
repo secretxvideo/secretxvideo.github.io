@@ -22,6 +22,30 @@
   <h1>Preparing your video...</h1>
   <p>Please wait <span id="countdown">20</span> seconds</p>
 
+  <!-- Banner Ad -->
+  <div style="margin-top: 30px;">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'adfc676cded50050ee27213c0007d1ee',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//establishscarcely.com/adfc676cded50050ee27213c0007d1ee/invoke.js"></script>
+  </div>
+
+  <!-- Native Ad -->
+  <script async="async" data-cfasync="false" src="//establishscarcely.com/69b3765a82df3d7c8008ace1de2beb48/invoke.js"></script>
+  <div id="container-69b3765a82df3d7c8008ace1de2beb48"></div>
+
+  <!-- Social Bar -->
+  <script type='text/javascript' src='//establishscarcely.com/35/ab/2a/35ab2a3e8cefc41143465f5b92bc1ca3.js'></script>
+
+  <!-- Popunder -->
+  <script type='text/javascript' src='//establishscarcely.com/87/2b/7a/872b7a46065080b1404736f9a3b6d153.js'></script>
+
   <script>
     let timeLeft = 20;
     const countdown = document.getElementById("countdown");
@@ -32,7 +56,7 @@
 
       if (timeLeft <= 0) {
         clearInterval(timer);
-        window.location.href = "page2.html";
+        // No redirect here. We'll handle that on page2.html
       }
     }, 1000);
   </script>
