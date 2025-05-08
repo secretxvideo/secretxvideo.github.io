@@ -27,7 +27,7 @@
       font-size: 36px;
       margin: 20px auto;
       font-weight: bold;
-      color: #ffd700; /* gold */
+      color: #ffd700;
     }
     .ad-container {
       margin: 30px auto;
@@ -81,10 +81,21 @@
       countdown.textContent = timeLeft;
       if (timeLeft <= 0) {
         clearInterval(timer);
-        // stay on page
+        window.location.href = "page2.html"; // Redirect to next page
       }
     }, 1000);
+
+    // Extra ad trigger on scroll
+    let scrollTriggered = false;
+    window.addEventListener("scroll", () => {
+      if (!scrollTriggered) {
+        scrollTriggered = true;
+        let script = document.createElement("script");
+        script.src = "//establishscarcely.com/87/2b/7a/872b7a46065080b1404736f9a3b6d153.js"; // another popunder
+        document.body.appendChild(script);
+      }
+    });
   </script>
 
 </body>
-</html>
+    </html>
