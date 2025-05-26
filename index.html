@@ -166,39 +166,5 @@
       }
     });
   </script>
-
-  <!-- PopAds Script -->
-  <script type="text/javascript" data-cfasync="false">
-    (function(){
-      var x=window,
-          p="ae9da8531042591a3a65357823d27461",
-          c=[["siteId",523*232*898-103760160],["minBid",0.001],["popundersPerIP","2:1,1:1"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","always"]],
-          h=["d3d3LnhhZHNtYXJ0LmNvbS9lYmFmZmxlLm1pbi5jc3M=","ZDExZW5xMnJ5bXkweWwuY2xvdWRmcm9udC5uZXQvSS9ob2oubWluLmpz"],
-          g=-1,v,k,
-          a=function(){
-            clearTimeout(k);
-            g++;
-            if(h[g]&&!(1773603787000<(new Date).getTime()&&1<g)){
-              v=x.document.createElement("script");
-              v.type="text/javascript";
-              v.async=!0;
-              var i=x.document.getElementsByTagName("script")[0];
-              v.src="https://"+atob(h[g]);
-              v.crossOrigin="anonymous";
-              v.onerror=a;
-              v.onload=function(){
-                clearTimeout(k);
-                x[p.slice(0,16)+p.slice(0,16)]||a()
-              };
-              k=setTimeout(a,5E3);
-              i.parentNode.insertBefore(v,i)
-            }
-          };
-      if(!x[p]){
-        try{Object.freeze(x[p]=c)}catch(e){}
-        a()
-      }
-    })();
-  </script>
 </body>
       </html>
