@@ -204,35 +204,34 @@
 </script>
 <script type="text/javascript" src="//establishscarcely.com/adfc676cded50050ee27213c0007d1ee/invoke.js"></script>
     
-  <div id="finalNotice">Click on any ad above to get the Redirect to direct Video</div>
+<div id="finalNotice">Click anywhere to unlock the video</div>
 
-  <div id="countdownSection">
-    <p>Wait for <span id="countdown">20</span> seconds...</p>
-    <button id="continueBtn" onclick="window.location.href='page2.html'">Continue</button>
-  </div>
+<div id="countdownSection" style="display: none;">
+  <p><strong>Please wait...</strong></p>
+  <p>Wait for <span id="countdown">35</span> seconds...</p>
+</div>
 
-  <script>
-    let clicked = false;
-    const countdownSection = document.getElementById('countdownSection');
-    const countdown = document.getElementById('countdown');
-    const continueBtn = document.getElementById('continueBtn');
+<script>
+  let countdownStarted = false;
+  const countdownSection = document.getElementById('countdownSection');
+  const countdown = document.getElementById('countdown');
 
-    document.body.addEventListener('click', function(e) {
-      if (!clicked && e.target.closest('.ad-container')) {
-        clicked = true;
-        countdownSection.style.display = 'block';
-        let timeLeft = 20;
-        const timer = setInterval(() => {
-          timeLeft--;
-          countdown.textContent = timeLeft;
-          if (timeLeft <= 0) {
-            clearInterval(timer);
-            continueBtn.style.display = 'inline-block';
-          }
-        }, 1000);
-      }
-    });
-  </script>
-</body>
-                                                                                                                                                                                                               </html>
-    
+  document.body.addEventListener('click', function () {
+    if (!countdownStarted) {
+      countdownStarted = true;
+      countdownSection.style.display = 'block';
+      let timeLeft = 35;
+      countdown.textContent = timeLeft;
+
+      const timer = setInterval(() => {
+        timeLeft--;
+        countdown.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          window.location.href = 'page2.html'; // 🔁 Redirect after 35 seconds
+        }
+      }, 1000);
+    }
+  });
+</script>
